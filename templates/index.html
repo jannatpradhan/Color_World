@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body, html {
+  background-color:#EBECF0;
+}
+.collapsible {
+
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  margin-top: 30px;
+  color: #f1f1f1;
+  font-size: 15px;
+  border-radius: 20px;
+  border: 0;
+  outline: 0;
+  text-align: center;
+  box-shadow: -5px -5px 20px #EBECF0,  5px 5px 20px #BABECC;
+  transition: all 0.2s ease-in-out;
+ 
+  
+}
+.collapsible:hover {
+    box-shadow: -2px -2px 5px #EBECF0, 2px 2px 5px #BABECC;
+  }
+  
+
+.collapsible:active {
+    box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #EBECF0;
+}
+
+
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+  text-align: center
+}
+.color-box{
+    width:120px;
+    height:120px;
+    border-radius: 50;
+    border: 2px solid red;
+    margin: 10px;
+    
+    display:inline-block;
+    align-self: auto
+}
+</style>
+</head>
+<body> 
+
+<h2>Colour World</h2>
+
+ 
+<button class="collapsible" style="background-color: #24A0E8">Blue</button>
+<div class="content">
+    <div class="color-box">
+        This text is enclosed in a box.
+    </div>
+    <div class="color-box">
+        This text is enclosed in a box.
+    </div>
+    <div class="color-box">
+        This text is enclosed in a box.
+    </div>
+    <div class="color-box">
+        This text is enclosed in a box.
+    </div>
+    <div class="color-box">
+        This text is enclosed in a box.
+    </div>
+    <div class="color-box">
+        This text is enclosed in a box.
+    </div>
+    <div class="color-box">
+        This text is enclosed in a box.
+    </div>
+    <div class="color-box">
+        This text is enclosed in a box.
+    </div>
+    <div class="color-box">
+        This text is enclosed in a box.
+    </div>
+    <div class="color-box">
+        This text is enclosed in a box.
+    </div>
+    <div class="color-box">
+        This text is enclosed in a box.
+    </div>
+    <div class="color-box">
+        This text is enclosed in a box.
+    </div>
+    <div class="color-box">
+        This text is enclosed in a box.
+    </div>
+    <div class="color-box">
+        This text is enclosed in a box.
+    </div>
+    <div class="color-box">
+        This text is enclosed in a box.
+    </div>
+    <div class="color-box">
+        This text is enclosed in a box.
+    </div>
+</div>
+
+
+<button class="collapsible" style="background-color: green">Green</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<button class="collapsible" style="background-color: #FFD300">Yellow</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<button class="collapsible" style="background-color: red">Red</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+</body>
+</html>
